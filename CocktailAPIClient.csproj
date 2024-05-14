@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>APIVerve.API.Cocktail</Title>
+    <Version>1.0.0</Version>
+    <Authors>APIVerve</Authors>
+    <Company>APIVerve</Company>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+    <PackageReadmeFile>Readme.md</PackageReadmeFile>
+    <PackageProjectUrl>https://apiverve.com/marketplace/api/cocktail</PackageProjectUrl>
+    <SignAssembly>False</SignAssembly>
+    <Description>Cocktail is a simple tool for getting cocktail recipes. It returns the ingredients, instructions, and more of the cocktail.</Description>
+    <RepositoryUrl>https://github.com/apiverve/cocktail-NET</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>cocktail; cocktail recipe; cocktail api; cocktail tool; cocktail software; cocktail service; cocktail library; cocktail sdk; cocktail code; cocktail script; cocktail program; cocktail application; cocktail app; cocktail utility; cocktail helper; cocktail helper tool; cocktail helper software; cocktail helper service; cocktail helper library; cocktail helper sdk; cocktail helper code; cocktail helper script; cocktail helper program; cocktail helper application; cocktail helper app; cocktail helper utility; cocktail helper</PackageTags>
+    <Copyright>©2024 APIVerve. All Rights Reserved</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="Readme.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
