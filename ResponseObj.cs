@@ -31,9 +31,6 @@ public class cocktails
     [JsonProperty("ingredients")]
     public ingredients[] ingredients { get; set; }
 
-    [JsonProperty("garnish")]
-    public string garnish { get; set; }
-
     [JsonProperty("preparation")]
     public string preparation { get; set; }
 
