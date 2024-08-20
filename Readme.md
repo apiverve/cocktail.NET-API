@@ -1,4 +1,4 @@
-Cocktail API
+Cocktail Recipe API
 ============
 
 Cocktail is a simple tool for getting cocktail recipes. It returns the ingredients, instructions, and more of the cocktail.
@@ -7,7 +7,7 @@ Cocktail is a simple tool for getting cocktail recipes. It returns the ingredien
 ![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
 ![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a .NET Wrapper for the [Cocktail API](https://apiverve.com/marketplace/api/cocktail)
+This is a .NET Wrapper for the [Cocktail Recipe API](https://apiverve.com/marketplace/api/cocktail)
 
 ---
 
@@ -15,17 +15,17 @@ This is a .NET Wrapper for the [Cocktail API](https://apiverve.com/marketplace/a
 
 Using the .NET CLI:
 ```
-dotnet add package APIVerve.API.Cocktail
+dotnet add package APIVerve.API.CocktailRecipe
 ```
 
 Using the Package Manager:
 ```
-nuget install APIVerve.API.Cocktail
+nuget install APIVerve.API.CocktailRecipe
 ```
 
 Using the Package Manager Console:
 ```
-Install-Package APIVerve.API.Cocktail
+Install-Package APIVerve.API.CocktailRecipe
 ```
 
 From within Visual Studio:
@@ -33,8 +33,8 @@ From within Visual Studio:
 1. Open the Solution Explorer.
 2. Right-click on a project within your solution.
 3. Click on Manage NuGet Packages...
-4. Click on the Browse tab and search for "APIVerve.API.Cocktail".
-5. Click on the APIVerve.API.Cocktail package, select the appropriate version in the right-tab and click Install.
+4. Click on the Browse tab and search for "APIVerve.API.CocktailRecipe".
+5. Click on the APIVerve.API.CocktailRecipe package, select the appropriate version in the right-tab and click Install.
 
 
 ---
@@ -48,17 +48,17 @@ You can get it by signing up at [https://apiverve.com](https://apiverve.com)
 
 ## Usage
 
-The Cocktail API documentation is found here: [https://docs.apiverve.com/api/cocktail](https://docs.apiverve.com/api/cocktail).  
+The Cocktail Recipe API documentation is found here: [https://docs.apiverve.com/api/cocktail](https://docs.apiverve.com/api/cocktail).  
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
 
 ###### Authentication
-Cocktail API uses API Key-based authentication. When you create an instance of the API client, you can pass your API Key as a parameter.
+Cocktail Recipe API uses API Key-based authentication. When you create an instance of the API client, you can pass your API Key as a parameter.
 
 ```
 // Create an instance of the API client
-var apiClient = new CocktailAPIClient("[YOUR_API_KEY]", true);
+var apiClient = new CocktailRecipeAPIClient("[YOUR_API_KEY]", true);
 ```
 
 ---
@@ -70,7 +70,7 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```
-var queryOptions = new cocktailQueryOptions {
+var queryOptions = new CocktailRecipeQueryOptions {
   name = "martini"
 };
 ```
@@ -215,7 +215,8 @@ if(response.error != null) {
         "preparation": "Stir in mixing glass with ice cubes. Strain into chilled martini glass. Squeeze oil from lemon peel onto the drink, or garnish with olive."
       }
     ]
-  }
+  },
+  "code": 200
 }
 ```
 
