@@ -4,65 +4,70 @@ using Newtonsoft.Json;
 
 namespace APIVerve
 {
-public class ingredients
-{
-    [JsonProperty("unit")]
-    public string unit { get; set; }
+    /// <summary>
+    /// Ingredients data
+    /// </summary>
+    public class Ingredients
+    {
+        [JsonProperty("unit")]
+        public string Unit { get; set; }
 
-    [JsonProperty("amount")]
-    public int amount { get; set; }
+        [JsonProperty("amount")]
+        public int Amount { get; set; }
 
-    [JsonProperty("ingredient")]
-    public string ingredient { get; set; }
+        [JsonProperty("ingredient")]
+        public string Ingredient { get; set; }
 
-}
+    }
+    /// <summary>
+    /// Cocktails data
+    /// </summary>
+    public class Cocktails
+    {
+        [JsonProperty("name")]
+        public string Name { get; set; }
 
-public class cocktails
-{
-    [JsonProperty("name")]
-    public string name { get; set; }
+        [JsonProperty("glass")]
+        public string Glass { get; set; }
 
-    [JsonProperty("glass")]
-    public string glass { get; set; }
+        [JsonProperty("category")]
+        public string Category { get; set; }
 
-    [JsonProperty("category")]
-    public string category { get; set; }
+        [JsonProperty("ingredients")]
+        public Ingredients[] Ingredients { get; set; }
 
-    [JsonProperty("ingredients")]
-    public ingredients[] ingredients { get; set; }
+        [JsonProperty("preparation")]
+        public string Preparation { get; set; }
 
-    [JsonProperty("preparation")]
-    public string preparation { get; set; }
+    }
+    /// <summary>
+    /// Data data
+    /// </summary>
+    public class Data
+    {
+        [JsonProperty("count")]
+        public int Count { get; set; }
 
-}
+        [JsonProperty("filteredOn")]
+        public string FilteredOn { get; set; }
 
-public class data
-{
-    [JsonProperty("count")]
-    public int count { get; set; }
+        [JsonProperty("cocktails")]
+        public Cocktails[] Cocktails { get; set; }
 
-    [JsonProperty("filteredOn")]
-    public string filteredOn { get; set; }
+    }
+    /// <summary>
+    /// API Response object
+    /// </summary>
+    public class ResponseObj
+    {
+        [JsonProperty("status")]
+        public string Status { get; set; }
 
-    [JsonProperty("cocktails")]
-    public cocktails[] cocktails { get; set; }
+        [JsonProperty("error")]
+        public object Error { get; set; }
 
-}
+        [JsonProperty("data")]
+        public Data Data { get; set; }
 
-public class ResponseObj
-{
-    [JsonProperty("status")]
-    public string status { get; set; }
-
-    [JsonProperty("error")]
-    public object error { get; set; }
-
-    [JsonProperty("data")]
-    public data data { get; set; }
-
-    [JsonProperty("code")]
-    public int code { get; set; }
-
-}
-
+    }
 }
